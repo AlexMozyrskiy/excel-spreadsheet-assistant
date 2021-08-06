@@ -1,6 +1,11 @@
 @import "./library/styles/normalizeCSS/normalize.scss";
 @import "./library/styles/variables/index.scss";
+@import "./library/styles/fonts/SFPro/index.scss";
 
 *{
-    color: $brandColor;
+    font-family: 'SF Pro Display';
+}
+
+body {
+    background-color: #ebebed;
 }

@@ -1,6 +1,50 @@
+$activeColor: #fff;
+$notActiveColor: #c0beff;
+
 .menuItem {
-    font-family: MyFont;
     display: flex;
+    justify-content: center;
     align-items: center;
-    color: red;
+    height: 20px;
+
+    & > figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-right: 18px;
+
+        & > svg {
+
+            rect {
+                stroke: $notActiveColor;
+            }
+        }
+    }
+
+    & > span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        color: $notActiveColor;
+    }
+
+    &_active {
+
+        & > figure {
+
+            & > svg {
+
+                rect {
+                    stroke: $activeColor;
+                }
+            }
+        }
+
+        & > span {
+            color: $activeColor;
+        }
+    }
 }

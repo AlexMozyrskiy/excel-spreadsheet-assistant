@@ -5,7 +5,7 @@ import st from './index.module.scss';
 const Header = () => {
   return (
     <div className={st.header}>
-      
+      Header
     </div>
   );
 }

@@ -1,4 +1,28 @@
 .app {
-    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "sideBar header"
+        "sideBar content"
+    ;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 240px 1fr;
+
+    &__sidebar_notActive {
+        grid-template-columns: 111px 1fr;
+    }
+
     height: 100vh;
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__sideBar {
+        grid-area: sideBar;
+        height: 100%;
+    }
+
+    &__content {
+        grid-area: content;
+    }
 }

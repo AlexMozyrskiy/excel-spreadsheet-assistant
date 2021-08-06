@@ -1,6 +1,7 @@
 import React from "react";
 
 import SVG from 'react-inlinesvg';
+import cn from 'classnames';
 
 import st from './index.module.scss';
 
@@ -11,12 +12,14 @@ import st from './index.module.scss';
  * 
  * @param {SVGElement} icon - svg icon
  * @param {String} title - title of menu item
+ * @param {Boolean} isActive - активна ли MenuItem
  * 
  * @returns {JSX}
  */
-const MenuItem = ({ icon, title }) => {
+const MenuItem = ({ icon, title, isActive }) => {
+    
     return(
-        <div className={st.menuItem}>
+        <div className={cn(st.menuItem, isActive && st.menuItem_active)}>
             <figure><SVG src={icon} alt='Menu Icon'></SVG></figure>
             <span>{typeof title !== 'undefined' && title}</span>
         </div>
