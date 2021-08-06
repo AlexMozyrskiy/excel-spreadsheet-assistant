@@ -1,0 +1,6 @@
+@import "./library/styles/normalizeCSS/normalize.scss";
+@import "./library/styles/variables/index.scss";
+
+*{
+    color: $brandColor;
+}

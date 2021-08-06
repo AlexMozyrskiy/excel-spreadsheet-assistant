@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MunuItem from './';
+import MunuItem from '.';
 
 import { text, boolean } from '@storybook/addon-knobs';
 

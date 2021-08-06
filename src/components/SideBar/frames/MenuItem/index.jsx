@@ -1,5 +1,7 @@
 import React from "react";
 
+import SVG from 'react-inlinesvg';
+
 import st from './index.module.scss';
 
 /**
@@ -14,7 +16,10 @@ import st from './index.module.scss';
  */
 const MenuItem = ({ icon, title }) => {
     return(
-        <div className={st.menuItem}>{typeof title !== 'undefined' && title}</div>
+        <div className={st.menuItem}>
+            <figure><SVG src={icon} alt='Menu Icon'></SVG></figure>
+            <span>{typeof title !== 'undefined' && title}</span>
+        </div>
     );
 }
 
