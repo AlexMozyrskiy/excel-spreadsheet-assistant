@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import MunuItem from '.';
+import MunuItem from ".";
 
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean } from "@storybook/addon-knobs";
 
-import st from './index.module.scss';
+import st from "./index.module.scss";
 
 export default {
-    title: 'Nav/MenuItems',
-    component: MunuItem
-}
+  title: "Nav/MenuItems",
+  component: MunuItem,
+};
 
 export const MunuItemWithTitle = () => (
-    <MunuItem
-        title={text('Title', 'Test')}
-    />
+  <MunuItem title={text("Title", "Test")} />
 );

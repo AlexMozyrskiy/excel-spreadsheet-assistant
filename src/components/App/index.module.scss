@@ -1,28 +1,26 @@
 .app {
-    display: grid;
-    grid-template-areas: 
-        "sideBar header"
-        "sideBar content"
-    ;
-    grid-template-rows: 80px 1fr;
-    grid-template-columns: 240px 1fr;
+  display: grid;
+  grid-template-areas:
+    'sideBar header'
+    'sideBar content';
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 270px 1fr;
+  height: 100vh;
 
-    &__sidebar_notActive {
-        grid-template-columns: 111px 1fr;
+  &__header {
+    grid-area: header;
+  }
+
+  &__sideBar {
+    grid-area: sideBar;
+    background-color: #333269;
+
+    &_notActive {
+      grid-template-columns: 111px 1fr;
     }
+  }
 
-    height: 100vh;
-
-    &__header {
-        grid-area: header;
-    }
-
-    &__sideBar {
-        grid-area: sideBar;
-        height: 100%;
-    }
-
-    &__content {
-        grid-area: content;
-    }
+  &__content {
+    grid-area: content;
+  }
 }

@@ -1,0 +1,19 @@
+.serviceName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #d3d3de;
+  }
+
+  figure {
+    margin: 0;
+    margin-right: 20px;
+  }
+}

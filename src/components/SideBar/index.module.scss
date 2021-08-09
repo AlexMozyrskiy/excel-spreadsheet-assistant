@@ -1,7 +1,19 @@
 .sideBar {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    background-color: #333269;
-    height: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  height: 100%;
+
+  &__serviceNameWrapper {
+    margin-top: 55px;
+  }
+
+  & > nav {
+    margin: 0;
+
+    & > ul {
+      margin: 0;
+    }
+  }
 }

@@ -2,49 +2,46 @@ $activeColor: #fff;
 $notActiveColor: #c0beff;
 
 .menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  list-style-type: none;
+
+  & > figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    margin: 0;
+    margin-right: 18px;
 
+    & > svg {
+      rect {
+        stroke: $notActiveColor;
+      }
+    }
+  }
+
+  & > span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: $notActiveColor;
+  }
+
+  &_active {
     & > figure {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        margin-right: 18px;
-
-        & > svg {
-
-            rect {
-                stroke: $notActiveColor;
-            }
+      & > svg {
+        rect {
+          stroke: $activeColor;
         }
+      }
     }
 
     & > span {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 0.02em;
-        color: $notActiveColor;
+      color: $activeColor;
     }
-
-    &_active {
-
-        & > figure {
-
-            & > svg {
-
-                rect {
-                    stroke: $activeColor;
-                }
-            }
-        }
-
-        & > span {
-            color: $activeColor;
-        }
-    }
+  }
 }

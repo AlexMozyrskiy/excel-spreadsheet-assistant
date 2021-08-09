@@ -10,7 +10,7 @@ import Content from '../Content';
 import st from './index.module.scss';
 
 const App = () => {
-  const [isSideBarActive, setIsSideBarActive] = useState(true);
+  const [isSideBarActive, setIsSideBarActive] = useState<Boolean>(true);
 
   return (
     <div className={cn(st.app, !isSideBarActive && st.app__sidebar_notActive)}>
