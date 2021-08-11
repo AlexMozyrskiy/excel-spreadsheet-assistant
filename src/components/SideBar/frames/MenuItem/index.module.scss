@@ -3,10 +3,8 @@ $notActiveColor: #c0beff;
 
 .menuItem {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 20px;
-  list-style-type: none;
+  text-decoration: none;
 
   & > figure {
     display: flex;
@@ -25,6 +23,8 @@ $notActiveColor: #c0beff;
   & > span {
     font-style: normal;
     font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.02em;
@@ -41,6 +41,11 @@ $notActiveColor: #c0beff;
     }
 
     & > span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
       color: $activeColor;
     }
   }

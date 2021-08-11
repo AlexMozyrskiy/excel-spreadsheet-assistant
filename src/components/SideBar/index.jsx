@@ -15,8 +15,9 @@ const SideBar = () => {
       </div>
       <nav>
         <ul>
-          <MenuItem icon={testIcon} title='Side Bar' isActive={true} />
-          <MenuItem icon={testIcon} title='Side Bar' isActive={false} />
+          <MenuItem icon={testIcon} title='Side Bar' path='/' />
+          <MenuItem icon={testIcon} title='Side Bar' path='/test1' />
+          <MenuItem icon={testIcon} title='Side Bar' path='/test3' />
         </ul>
       </nav>
     </div>

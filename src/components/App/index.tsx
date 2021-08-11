@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 import cn from 'classnames';
 
 import Header from '../Header';
@@ -14,11 +14,17 @@ const App = () => {
 
   return (
     <div className={cn(st.app, !isSideBarActive && st.app__sidebar_notActive)}>
-      <header className={st.app__header}><Header /></header>
-      <section className={st.app__sideBar}><SideBar /></section>
-      <main className={st.app__content}><Content /></main>
+      <header className={st.app__header}>
+        <Header />
+      </header>
+      <section className={st.app__sideBar}>
+        <SideBar />
+      </section>
+      <main className={st.app__content}>
+        <Content />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
