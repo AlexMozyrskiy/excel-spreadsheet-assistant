@@ -6,7 +6,7 @@ $notActiveColor: #c0beff;
   align-items: center;
   text-decoration: none;
 
-  & > figure {
+  &__svgWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +17,10 @@ $notActiveColor: #c0beff;
       rect {
         stroke: $notActiveColor;
       }
+    }
+
+    &_sidebarNotActive {
+      margin-right: 0;
     }
   }
 

@@ -6,6 +6,13 @@ import cn from 'classnames';
 
 import st from './index.module.scss';
 
+interface IMenuItemProps {
+  icon: string;
+  title: string;
+  path: string;
+  isSideBarActive: Boolean;
+}
+
 /**
  * if typeof title === 'undefined' title is not rendering
  * this is needed to render the navigation in a minimized state,
@@ -13,20 +20,19 @@ import st from './index.module.scss';
  *
  * @param {SVGElement} icon - svg icon
  * @param {String} title - title of menu item
- * @param {Boolean} isActive - активна ли MenuItem
  * @param {String} path - ссылка
  *
  *
  * @returns {JSX}
  */
-const MenuItem = ({ icon, title, path }) => {
+const MenuItem: React.FC<IMenuItemProps> = ({ icon, title, path, isSideBarActive }) => {
   return (
     <li>
       <NavLink exact to={path} className={st.menuItem} activeClassName={st.menuItem_active}>
-        <figure>
-          <SVG src={icon} alt='Menu Icon'></SVG>
+        <figure className={cn(st.menuItem__svgWrapper, !isSideBarActive && st.menuItem__svgWrapper_sidebarNotActive)}>
+          <SVG src={icon} />
         </figure>
-        {typeof title !== 'undefined' && <span>{title}</span>}
+        {isSideBarActive && <span>{title}</span>}
       </NavLink>
     </li>
   );

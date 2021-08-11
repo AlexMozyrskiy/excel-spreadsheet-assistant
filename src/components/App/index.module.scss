@@ -7,6 +7,10 @@
   grid-template-columns: 270px 1fr;
   height: 100vh;
 
+  &_sideBarNotActive {
+    grid-template-columns: 120px 1fr;
+  }
+
   &__header {
     grid-area: header;
   }
@@ -14,10 +18,6 @@
   &__sideBar {
     grid-area: sideBar;
     background-color: #333269;
-
-    &_notActive {
-      grid-template-columns: 111px 1fr;
-    }
   }
 
   &__content {

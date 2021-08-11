@@ -10,15 +10,15 @@ import Content from '../Content';
 import st from './index.module.scss';
 
 const App = () => {
-  const [isSideBarActive, setIsSideBarActive] = useState<Boolean>(true);
+  const [isSideBarActive, setIsSideBarActive] = useState<Boolean>(false);
 
   return (
-    <div className={cn(st.app, !isSideBarActive && st.app__sidebar_notActive)}>
+    <div className={cn(st.app, !isSideBarActive && st.app_sideBarNotActive)}>
       <header className={st.app__header}>
         <Header />
       </header>
       <section className={st.app__sideBar}>
-        <SideBar />
+        <SideBar isSideBarActive={isSideBarActive} setIsSideBarActive={setIsSideBarActive} />
       </section>
       <main className={st.app__content}>
         <Content />
