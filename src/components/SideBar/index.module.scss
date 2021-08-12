@@ -1,8 +1,11 @@
 .sideBar {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  height: 100%;
 
   &__serviceNameWrapper {
-    margin-top: 55px;
+    padding-top: 55px;
   }
 
   & > nav {
@@ -15,11 +18,9 @@
 
       li {
         display: flex;
-        // justify-content: center;
         align-items: center;
         height: 34px;
         list-style-type: none;
-        cursor: pointer;
         padding-left: 53px;
 
         &:not(:first-child) {
@@ -29,51 +30,18 @@
     }
   }
 
-  &__arrow {
-    position: absolute;
-    top: -30px;
-    right: 20px;
-    height: 28px;
-    width: 28px;
-    background-color: inherit;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  &__slogan {
+    align-self: flex-end;
+    width: 175px;
+    height: 190px;
+    background-color: #24243a;
+    border-radius: 20px;
+    margin-bottom: 40px;
 
-    &::before,
-    &::after {
-      position: absolute;
-      content: ' ';
-      height: 17px;
-      width: 2px;
-      background-color: #c0beff;
-      border-radius: 20px;
-    }
-
-    &::after {
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%) rotate(-45deg);
-    }
-
-    &::before {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
-    }
-
-    &_notActiveSidebar {
-      &::after {
-        bottom: 0;
-        left: 50%;
-        transform: translateX(50%) rotate(45deg);
-      }
-
-      &::before {
-        top: 0;
-        right: 50%;
-        transform: translateX(50%) rotate(-45deg);
-      }
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
     }
   }
 }

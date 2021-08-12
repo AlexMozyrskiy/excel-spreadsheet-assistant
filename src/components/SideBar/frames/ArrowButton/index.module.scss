@@ -1,0 +1,47 @@
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: ' ';
+    height: 13px;
+    width: 3px;
+    background-color: #c0beff;
+    border-radius: 20px;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%) rotate(-45deg);
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &_notActiveSidebar {
+    &::after {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(50%) rotate(45deg);
+    }
+
+    &::before {
+      top: 0;
+      right: 50%;
+      transform: translateX(50%) rotate(-45deg);
+    }
+  }
+}
