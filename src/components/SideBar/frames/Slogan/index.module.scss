@@ -1,0 +1,21 @@
+.slogan {
+  align-self: flex-end;
+  width: 175px;
+  height: 190px;
+  background-color: #24243a;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding: 60px 30px 30px 21px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+}

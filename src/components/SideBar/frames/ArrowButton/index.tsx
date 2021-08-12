@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import st from './index.module.scss';
 
-interface ISideBarProps {
+interface IArrowButtonProps {
   isSideBarActive: Boolean;
   setIsSideBarActive: Dispatch<SetStateAction<Boolean>>;
 }
@@ -15,7 +15,7 @@ interface ISideBarProps {
  * @param {Function} setIsSideBarActive - SetStateAction
  * @returns
  */
-const ArrowButton: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive }) => {
+const ArrowButton: React.FC<IArrowButtonProps> = ({ isSideBarActive, setIsSideBarActive }) => {
   return (
     <button
       className={cn(st.arrow, !isSideBarActive && st.arrow_notActiveSidebar)}

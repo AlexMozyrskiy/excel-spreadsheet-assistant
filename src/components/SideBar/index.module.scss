@@ -29,19 +29,4 @@
       }
     }
   }
-
-  &__slogan {
-    align-self: flex-end;
-    width: 175px;
-    height: 190px;
-    background-color: #24243a;
-    border-radius: 20px;
-    margin-bottom: 40px;
-
-    &__wrapper {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-    }
-  }
 }

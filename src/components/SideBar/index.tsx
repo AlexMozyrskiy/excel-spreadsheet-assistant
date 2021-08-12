@@ -4,11 +4,12 @@ import cn from 'classnames';
 
 import MenuItem from './frames/MenuItem';
 import ServiceName from '../common/ServiceName';
+import ArrowButton from './frames/ArrowButton';
+import Slogan from './frames/Slogan';
 
 import testIcon from './sources/Icon.svg';
 
 import st from './index.module.scss';
-import ArrowButton from './frames/ArrowButton';
 
 interface ISideBarProps {
   isSideBarActive: Boolean;
@@ -19,7 +20,7 @@ interface ISideBarProps {
  *
  * @param {Boolean} isSideBarActive - свернут или развурнут сайдбар
  * @param {Function} setIsSideBarActive - SetStateAction
- * @returns
+ * @returns {JSX}
  */
 const SideBar: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive }) => {
   return (
@@ -38,9 +39,10 @@ const SideBar: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive 
         </ul>
       </nav>
 
-      <div className={st.sideBar__slogan__wrapper}>
-        {isSideBarActive && <article className={st.sideBar__slogan}>Test</article>}
-      </div>
+      <Slogan
+        isSideBarActive={isSideBarActive}
+        sloganText='Какой-то тестовй текст. Это тестовый текст, потом тут бедт какая-либо важная информация.'
+      />
     </div>
   );
 };
