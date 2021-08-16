@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import Button from "./";
+import Button from './';
 
-import { text, boolean } from "@storybook/addon-knobs";
+import { text, boolean } from '@storybook/addon-knobs';
 
-import st from "./index.module.scss";
+import st from './index.module.scss';
 
 export default {
-  title: "Form/control/Button",
+  title: 'Form/control/Button',
   component: Button,
   argTypes: {
     // типы для пропсов
-    title: { control: "text" }, // для аддона controls
-    className: { control: "text" },
-    disabled: { control: "boolean" },
-    onClickHandler: { action: "clicked" },
+    title: { control: 'text' }, // для аддона controls
+    className: { control: 'text' },
+    disabled: { control: 'boolean' },
+    onClickHandler: { action: 'clicked' },
   },
   args: {
-    title: "Button", // проп по умолчанию для всей стори
+    title: 'Button', // проп по умолчанию для всей стори
   },
   // decorators: [story => <Center>{story()}</Center>]   // оборачивет все компоненты, можно добавить декоратор глобально в файле preview.js
 };
@@ -33,7 +33,7 @@ const Template = (args) => <Button {...args} />;
 
 export const PrimaryA = Template.bind({});
 PrimaryA.args = {
-  title: "PrimaryA", // переопределяем проп по умолчанию
+  title: 'PrimaryA', // переопределяем проп по умолчанию
   className: st.button_primary,
 };
 
@@ -44,8 +44,8 @@ DangerA.args = {
 
 export const Knobs = () => (
   <Button
-    className={text("ClassName", st.button_perple)}
-    isDisabled={boolean("Disabled", false)}
-    title={text("Title", "Test Knobs")}
+    className={text('ClassName', st.button_perple)}
+    isDisabled={boolean('Disabled', false)}
+    title={text('Title', 'Test Knobs')}
   />
 );

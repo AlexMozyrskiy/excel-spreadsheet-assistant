@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import st from './index.module.scss';
 
-interface IArrowButtonProps {
+export interface IArrowButtonProps {
   isSideBarActive: Boolean;
   setIsSideBarActive: Dispatch<SetStateAction<Boolean>>;
 }
@@ -17,10 +17,12 @@ interface IArrowButtonProps {
  */
 const ArrowButton: React.FC<IArrowButtonProps> = ({ isSideBarActive, setIsSideBarActive }) => {
   return (
-    <button
-      className={cn(st.arrow, !isSideBarActive && st.arrow_notActiveSidebar)}
-      onClick={() => (isSideBarActive ? setIsSideBarActive(false) : setIsSideBarActive(true))}
-    ></button>
+    <div className={st.arrow__wrapper}>
+      <button
+        className={cn(st.arrow, !isSideBarActive && st.arrow_notActiveSidebar)}
+        onClick={() => (isSideBarActive ? setIsSideBarActive(false) : setIsSideBarActive(true))}
+      ></button>
+    </div>
   );
 };
 

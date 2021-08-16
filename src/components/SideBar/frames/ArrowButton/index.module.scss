@@ -9,6 +9,10 @@
   outline: none;
   cursor: pointer;
 
+  &__wrapper {
+    position: relative;
+  }
+
   &::before,
   &::after {
     position: absolute;
