@@ -2,12 +2,12 @@ import React, { Dispatch, SetStateAction } from 'react';
 
 import cn from 'classnames';
 
+import Logo from '../common/Logo';
 import MenuItem from './frames/MenuItem';
 import ServiceName from '../common/ServiceName';
 import ArrowButton from './frames/ArrowButton';
 import Slogan from './frames/Slogan';
 
-import logo from '../../library/logo/logo.png';
 import testIcon from './sources/Icon.svg';
 import downloadIcon from './sources/download.svg';
 
@@ -30,9 +30,10 @@ const SideBar: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive 
       <ArrowButton isSideBarActive={isSideBarActive} setIsSideBarActive={setIsSideBarActive} />
 
       <section className={st.sideBar__serviceName}>
-        <figure>
-          <img src={logo} />
-        </figure>
+        <div className={st.sideBar__serviceName__logo}>
+          <Logo />
+        </div>
+
         {isSideBarActive && (
           <div className={st.sideBar__serviceName__wrapper}>
             <ServiceName />
