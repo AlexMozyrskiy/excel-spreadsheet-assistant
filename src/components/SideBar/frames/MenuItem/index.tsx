@@ -27,8 +27,8 @@ interface IMenuItemProps {
  */
 const MenuItem: React.FC<IMenuItemProps> = ({ icon, title, path, isSideBarActive }) => {
   return (
-    <li>
-      <NavLink exact to={path} className={st.menuItem} activeClassName={st.menuItem_active}>
+    <li className={st.menuItem}>
+      <NavLink exact to={path} className={st.menuItem__link} activeClassName={st.menuItem__link_active}>
         <figure className={cn(st.menuItem__svgWrapper, !isSideBarActive && st.menuItem__svgWrapper_sidebarNotActive)}>
           <SVG src={icon} />
         </figure>

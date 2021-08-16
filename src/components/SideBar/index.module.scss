@@ -15,18 +15,6 @@
       margin: 0;
       padding: 0;
       margin-top: 66px;
-
-      li {
-        display: flex;
-        align-items: center;
-        height: 34px;
-        list-style-type: none;
-        padding-left: 53px;
-
-        &:not(:first-child) {
-          margin-top: 32px;
-        }
-      }
     }
   }
 }

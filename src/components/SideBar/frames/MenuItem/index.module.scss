@@ -4,16 +4,66 @@ $notActiveColor: #c0beff;
 .menuItem {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  height: 34px;
+  list-style-type: none;
+  padding-left: 53px;
+
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    & > span {
+      font-style: normal;
+      font-weight: normal;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+      color: $notActiveColor;
+    }
+
+    &_active {
+      & > figure {
+        & > svg {
+          path {
+            fill: $activeColor;
+          }
+          rect {
+            stroke: $activeColor;
+          }
+        }
+      }
+
+      & > span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: $activeColor;
+      }
+    }
+  }
 
   &__svgWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20px;
+    height: 20px;
     margin: 0;
     margin-right: 18px;
 
     & > svg {
+      path {
+        fill: $notActiveColor;
+      }
       rect {
         stroke: $notActiveColor;
       }
@@ -21,36 +71,6 @@ $notActiveColor: #c0beff;
 
     &_sidebarNotActive {
       margin-right: 0;
-    }
-  }
-
-  & > span {
-    font-style: normal;
-    font-weight: normal;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.02em;
-    color: $notActiveColor;
-  }
-
-  &_active {
-    & > figure {
-      & > svg {
-        rect {
-          stroke: $activeColor;
-        }
-      }
-    }
-
-    & > span {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.02em;
-      color: $activeColor;
     }
   }
 }

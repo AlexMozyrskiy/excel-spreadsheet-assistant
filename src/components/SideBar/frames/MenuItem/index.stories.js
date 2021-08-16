@@ -1,16 +1,67 @@
-import React from "react";
+import React from 'react';
 
-import MunuItem from ".";
+import { BrowserRouter } from 'react-router-dom';
 
-import { text, boolean } from "@storybook/addon-knobs";
+import testIcon from '../../sources/Icon.svg';
+import downloadIcon from '../../sources/download.svg';
 
-import st from "./index.module.scss";
+import MenuItem from '.';
 
 export default {
-  title: "Nav/MenuItems",
-  component: MunuItem,
+  title: 'Sidebar/MenuItem',
+  component: MenuItem,
+  decorators: [
+    (Story) => (
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
+  argTypes: {
+    // типы для пропсов
+    icon: {},
+    title: {
+      table: {
+        type: {
+          summary: 'text',
+        },
+      },
+      description: 'title of Munu Item',
+      control: {
+        type: 'text',
+      },
+    },
+    path: {
+      table: {
+        type: {
+          summary: 'text',
+        },
+      },
+      description: 'history push by NavLink',
+      control: {
+        type: 'text',
+      },
+    },
+    isSideBarActive: {
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+      },
+      description: 'isSideBarActive',
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 };
 
-export const MunuItemWithTitle = () => (
-  <MunuItem title={text("Title", "Test")} />
-);
+const Template = (args) => <MenuItem {...args} />;
+
+export const DownLoadFile = Template.bind({});
+DownLoadFile.args = {
+  title: 'Загрузить файл',
+  path: '/upload',
+  isSideBarActive: true,
+  icon: downloadIcon,
+};

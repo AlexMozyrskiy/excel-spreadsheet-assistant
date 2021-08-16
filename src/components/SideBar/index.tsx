@@ -8,6 +8,7 @@ import ArrowButton from './frames/ArrowButton';
 import Slogan from './frames/Slogan';
 
 import testIcon from './sources/Icon.svg';
+import downloadIcon from './sources/download.svg';
 
 import st from './index.module.scss';
 
@@ -34,7 +35,7 @@ const SideBar: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive 
       <nav>
         <ul>
           <MenuItem icon={testIcon} title='Dashboard' path='/' isSideBarActive={isSideBarActive} />
-          <MenuItem icon={testIcon} title='Side Bar' path='/test1' isSideBarActive={isSideBarActive} />
+          <MenuItem icon={downloadIcon} title='Загрузить файл' path='/upload' isSideBarActive={isSideBarActive} />
           <MenuItem icon={testIcon} title='Side Bar' path='/test3' isSideBarActive={isSideBarActive} />
         </ul>
       </nav>
