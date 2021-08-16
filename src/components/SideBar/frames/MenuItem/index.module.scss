@@ -4,6 +4,7 @@ $notActiveColor: #c0beff;
 .menuItem {
   display: flex;
   align-items: center;
+  position: relative;
   height: 34px;
   list-style-type: none;
   padding-left: 53px;
@@ -16,6 +17,26 @@ $notActiveColor: #c0beff;
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: $notActiveColor;
+    // color: linear-gradient(90deg, #ec441e 0%, #ee2a4a 100%);
+    transition: 0.5s;
+
+    &:hover:not(.menuItem__link_active) {
+      color: #fff;
+    }
+
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   height: 0;
+    //   top: 0;
+    //   left: 0;
+    //   width: 3px;
+    //   background-color: #ee3637;
+    //   animation-name: linkDeActivate;
+    //   animation-duration: 1s;
+    //   animation-fill-mode: forwards;
+    // }
 
     & > span {
       font-style: normal;
@@ -25,10 +46,12 @@ $notActiveColor: #c0beff;
       font-size: 16px;
       line-height: 19px;
       letter-spacing: 0.02em;
-      color: $notActiveColor;
+      // color: $notActiveColor;
     }
 
     &_active {
+      color: $activeColor;
+
       & > figure {
         & > svg {
           path {
@@ -46,7 +69,19 @@ $notActiveColor: #c0beff;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: 0.02em;
-        color: $activeColor;
+        // color: $activeColor;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 3px;
+        background-color: #ee3637;
+        animation-name: linkActivate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -72,5 +107,25 @@ $notActiveColor: #c0beff;
     &_sidebarNotActive {
       margin-right: 0;
     }
+  }
+}
+
+@keyframes linkActivate {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes linkDeActivate {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0;
   }
 }
