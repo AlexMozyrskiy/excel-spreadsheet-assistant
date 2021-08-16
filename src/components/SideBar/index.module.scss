@@ -4,8 +4,30 @@
   position: relative;
   height: 100%;
 
-  &__serviceNameWrapper {
-    padding-top: 55px;
+  &__serviceName {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    margin-left: 50px;
+    padding-top: 100px;
+
+    & > figure {
+      margin: 0;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+
+      & > {
+        img {
+          height: inherit;
+          width: inherit;
+        }
+      }
+    }
+
+    &__wrapper {
+      margin-left: 20px;
+    }
   }
 
   & > nav {

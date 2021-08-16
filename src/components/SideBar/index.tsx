@@ -7,6 +7,7 @@ import ServiceName from '../common/ServiceName';
 import ArrowButton from './frames/ArrowButton';
 import Slogan from './frames/Slogan';
 
+import logo from '../../library/logo/logo.png';
 import testIcon from './sources/Icon.svg';
 import downloadIcon from './sources/download.svg';
 
@@ -28,9 +29,16 @@ const SideBar: React.FC<ISideBarProps> = ({ isSideBarActive, setIsSideBarActive 
     <div className={st.sideBar}>
       <ArrowButton isSideBarActive={isSideBarActive} setIsSideBarActive={setIsSideBarActive} />
 
-      <div className={st.sideBar__serviceNameWrapper}>
-        <ServiceName />
-      </div>
+      <section className={st.sideBar__serviceName}>
+        <figure>
+          <img src={logo} />
+        </figure>
+        {isSideBarActive && (
+          <div className={st.sideBar__serviceName__wrapper}>
+            <ServiceName />
+          </div>
+        )}
+      </section>
 
       <nav>
         <ul>
